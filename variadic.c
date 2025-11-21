@@ -5,13 +5,14 @@ void display(int count,...)
     va_list list;
     va_start (list,count);
     for(int i=1;i<=count;i++)
+    
     {
-        int n= va_arg(list,int);
-        printf("%d"  ,n);
+    int n=va_arg(list,int);
+    printf("%d",n);
+    va_end(list);
     }
-va_end(list);
 }
 void main()
 {
-    display(4,32,23,41,14);
+    display(3,23,14,5);
 }
